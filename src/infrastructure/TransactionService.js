@@ -418,7 +418,6 @@ class TransactionService {
         metadataValue: transactionBody.value,
         valueSizeDelta: transactionBody.valueSizeDelta
       }
-    }
 
     case TransactionType.VRF_KEY_LINK:
       return {
@@ -427,7 +426,7 @@ class TransactionService {
         linkedPublicKey: transactionBody.linkedPublicKey,
         linkedAccountAddress: Address.createFromPublicKey(transactionBody.linkedPublicKey, http.networkType).plain()
       }
-
+    }
   }
 
   /**
